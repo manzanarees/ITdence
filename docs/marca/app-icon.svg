@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="grad" x1="15%" y1="10%" x2="90%" y2="95%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="50%" stop-color="#885CF6"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <mask id="ticketMask">
+      <rect x="198.4" y="192" width="194.6" height="128" rx="25.6" fill="#ffffff"/>
+      <circle cx="198.4" cy="256" r="20.5" fill="#000000"/>
+      <circle cx="393" cy="256" r="20.5" fill="#000000"/>
+    </mask>
+    <clipPath id="roundedSquare">
+      <rect x="0" y="0" width="512" height="512" rx="112"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#roundedSquare)">
+    <rect x="0" y="0" width="512" height="512" fill="#0F172A"/>
+
+    <!-- anillo circular -->
+    <circle cx="256" cy="256" r="215" fill="none" stroke="url(#grad)" stroke-width="23"/>
+
+    <!-- ticket -->
+    <rect x="198.4" y="192" width="194.6" height="128" rx="25.6" fill="url(#grad)" mask="url(#ticketMask)"/>
+
+    <!-- letra i -->
+    <circle cx="256" cy="225.6" r="11.5" fill="#ffffff"/>
+    <rect x="244.5" y="248.5" width="23" height="51" rx="11.5" fill="#ffffff"/>
+  </g>
+</svg>

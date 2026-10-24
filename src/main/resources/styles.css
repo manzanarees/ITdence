@@ -1,0 +1,1606 @@
+/*
+  Estilos de ITdence.
+
+  Los colores salen del logo (degradado morado -> azul, #A855F7 / #885CF6 / #3B82F6
+  y gris oscuro #0F172A). Los de estado y prioridad son los de los mockups.
+
+  JavaFX no tiene variables CSS como la web, pero si "looked-up colors":
+  se definen en .root con un nombre que empieza por guion y se usan en el resto.
+  El modo oscuro solo redefine esos colores en .root.oscuro.
+
+  Tipografias (en src/main/resources/fonts, licencia OFL):
+    "Archivo" (bold) y "Archivo ExtraBold"  -> titulos
+    "Public Sans" y "Public Sans SemiBold"  -> texto
+    "IBM Plex Mono" y "IBM Plex Mono Medium" -> etiquetas, ids, cabeceras de tabla
+*/
+
+/* ================= COLORES ================= */
+
+.root {
+    -c-fondo: #f3f4f8;
+    -c-superficie: #ffffff;
+    -c-superficie-2: #f7f8fb;
+    -c-superficie-3: #eceef4;
+    -c-borde: #e1e4ec;
+    -c-borde-fuerte: #c6ccd8;
+    -c-texto: #0f172a;
+    -c-texto-2: #5b6472;
+    -c-texto-3: #8e98a8;
+
+    -c-acento: #7c4dff;
+    -c-acento-hover: #6a3ae8;
+    -c-acento-texto: #ffffff;
+    -c-acento-suave: #f0eaff;
+    -c-acento-borde: #d9cbff;
+    -c-degradado: linear-gradient(to right, #a855f7 0%, #885cf6 50%, #3b82f6 100%);
+    -c-degradado-hover: linear-gradient(to right, #9a45ec 0%, #7a4de8 50%, #2f72e6 100%);
+
+    -c-abierto: #2563eb;       -c-abierto-bg: #e8f0ff;
+    -c-progreso: #b45309;      -c-progreso-bg: #fdf1dc;
+    -c-resuelto: #15803d;      -c-resuelto-bg: #e3f5e9;
+    -c-cerrado: #64748b;       -c-cerrado-bg: #eef1f5;
+    -c-alta: #c0262d;          -c-alta-bg: #fdeaea;
+
+    -c-estrella: #f59e0b;
+    -c-peligro: #dc2626;
+    -c-peligro-bg: #fdeaea;
+    -c-exito: #16a34a;
+
+    -c-avatar-0: #7c4dff;  -c-avatar-1: #2563eb;  -c-avatar-2: #0891b2;
+    -c-avatar-3: #db2777;  -c-avatar-4: #ea580c;
+
+    /* colores base que usan los controles de JavaFX por dentro */
+    -fx-base: -c-superficie;
+    -fx-background: -c-fondo;
+    -fx-control-inner-background: -c-superficie;
+    -fx-control-inner-background-alt: -c-superficie-2;
+    -fx-accent: -c-acento;
+    -fx-focus-color: -c-acento;
+    -fx-faint-focus-color: transparent;
+    -fx-text-base-color: -c-texto;
+    -fx-text-background-color: -c-texto;
+    -fx-text-inner-color: -c-texto;
+    -fx-mark-color: -c-texto-2;
+    -fx-selection-bar: -c-acento-suave;
+    -fx-selection-bar-non-focused: -c-acento-suave;
+    -fx-selection-bar-text: -c-texto;
+    -fx-prompt-text-fill: -c-texto-3;
+
+    -fx-background-color: -c-fondo;
+    -fx-font-family: "Public Sans";
+    -fx-font-size: 13.5px;
+}
+
+.root.oscuro {
+    -c-fondo: #0b1120;
+    -c-superficie: #111a2e;
+    -c-superficie-2: #16213a;
+    -c-superficie-3: #1d2a47;
+    -c-borde: #24314d;
+    -c-borde-fuerte: #36466a;
+    -c-texto: #e7eaf3;
+    -c-texto-2: #a4aec3;
+    -c-texto-3: #6d7a93;
+
+    -c-acento: #a78bfa;
+    -c-acento-hover: #b9a2fb;
+    -c-acento-texto: #ffffff;
+    -c-acento-suave: #251d4a;
+    -c-acento-borde: #3f3475;
+
+    -c-abierto: #8fb2ff;       -c-abierto-bg: #17284d;
+    -c-progreso: #f4c36a;      -c-progreso-bg: #3a2a10;
+    -c-resuelto: #7ed69d;      -c-resuelto-bg: #12301f;
+    -c-cerrado: #a4aec3;       -c-cerrado-bg: #1f2940;
+    -c-alta: #f79494;          -c-alta-bg: #3b1619;
+
+    -c-estrella: #fbbf24;
+    -c-peligro: #f87171;
+    -c-peligro-bg: #3b1619;
+    -c-exito: #4ade80;
+}
+
+.fondo-superficie {
+    -fx-background-color: -c-superficie;
+}
+
+.fondo-app {
+    -fx-background-color: -c-fondo;
+}
+
+/* ================= TEXTOS ================= */
+
+.titulo {
+    -fx-font-family: "Archivo ExtraBold";
+    -fx-font-size: 26px;
+    -fx-text-fill: -c-texto;
+}
+
+.titulo-modal {
+    -fx-font-family: "Archivo";
+    -fx-font-weight: bold;
+    -fx-font-size: 21px;
+    -fx-text-fill: -c-texto;
+}
+
+.subtitulo, .tarjeta-titulo {
+    -fx-font-family: "Archivo";
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: -c-texto;
+}
+
+.texto-secundario {
+    -fx-text-fill: -c-texto-2;
+}
+
+.texto-tenue {
+    -fx-text-fill: -c-texto-3;
+    -fx-font-size: 12.5px;
+}
+
+.etiqueta-campo {
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-font-size: 12.5px;
+    -fx-text-fill: -c-texto-2;
+}
+
+.descripcion {
+    -fx-text-fill: -c-texto-2;
+    -fx-font-size: 14px;
+    -fx-line-spacing: 4px;
+}
+
+.contador-caracteres {
+    -fx-font-family: "IBM Plex Mono";
+    -fx-font-size: 11px;
+    -fx-text-fill: -c-texto-3;
+}
+
+/* ================= MARCA ================= */
+
+.marca-texto, .login-marca {
+    -fx-font-family: "Archivo ExtraBold";
+    -fx-font-size: 21px;
+}
+
+.login-marca {
+    -fx-font-size: 34px;
+}
+
+.marca-it {
+    -fx-text-fill: linear-gradient(to bottom right, #a855f7, #885cf6, #3b82f6);
+}
+
+.marca-dence {
+    -fx-text-fill: -c-texto;
+}
+
+/* ================= ICONOS ================= */
+
+.icono {
+    -fx-fill: -c-texto-2;
+}
+
+/* ================= BARRA LATERAL ================= */
+
+.barra-lateral {
+    -fx-background-color: -c-superficie;
+    -fx-border-color: transparent -c-borde transparent transparent;
+    -fx-border-width: 0 1 0 0;
+    -fx-padding: 24 16 16 16;
+}
+
+.opcion-menu {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+    -fx-padding: 10 14;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.opcion-menu:hover {
+    -fx-background-color: -c-superficie-2;
+}
+
+.opcion-menu:selected {
+    -fx-background-color: -c-acento-suave;
+}
+
+.opcion-menu .opcion-texto {
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-text-fill: -c-texto-2;
+    -fx-font-size: 13.5px;
+}
+
+.opcion-menu .icono {
+    -fx-fill: -c-texto-3;
+}
+
+.opcion-menu:selected .opcion-texto {
+    -fx-text-fill: -c-acento;
+}
+
+.opcion-menu:selected .icono {
+    -fx-fill: -c-acento;
+}
+
+.contador {
+    -fx-font-family: "IBM Plex Mono Medium";
+    -fx-font-size: 12px;
+    -fx-text-fill: -c-texto-3;
+}
+
+.opcion-menu:selected .contador {
+    -fx-text-fill: -c-acento;
+}
+
+.tarjeta-usuario {
+    -fx-background-color: -c-superficie-2;
+    -fx-background-radius: 8;
+    -fx-border-color: -c-borde;
+    -fx-border-radius: 8;
+    -fx-padding: 10 8 10 10;
+}
+
+.usuario-nombre {
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-text-fill: -c-texto;
+}
+
+.usuario-rol {
+    -fx-font-size: 12px;
+    -fx-text-fill: -c-texto-3;
+}
+
+/* ================= AVATARES ================= */
+
+.avatar {
+    -fx-background-radius: 100;
+    -fx-alignment: center;
+    -fx-font-family: "Public Sans";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.avatar-0 { -fx-background-color: -c-avatar-0; }
+.avatar-1 { -fx-background-color: -c-avatar-1; }
+.avatar-2 { -fx-background-color: -c-avatar-2; }
+.avatar-3 { -fx-background-color: -c-avatar-3; }
+.avatar-4 { -fx-background-color: -c-avatar-4; }
+
+/* ================= CAMPOS ================= */
+
+.text-field, .password-field, .text-area, .combo-box {
+    -fx-background-color: -c-superficie;
+    -fx-border-color: -c-borde-fuerte;
+    -fx-border-width: 1.2;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-prompt-text-fill: -c-texto-3;
+    -fx-text-fill: -c-texto;
+    -fx-highlight-fill: -c-acento-suave;
+    -fx-highlight-text-fill: -c-texto;
+}
+
+.text-field, .password-field {
+    -fx-padding: 10 12;
+}
+
+.text-field:hover, .password-field:hover, .text-area:hover, .combo-box:hover {
+    -fx-border-color: -c-texto-3;
+}
+
+.text-field:focused, .password-field:focused, .text-area:focused, .combo-box:focused, .combo-box:showing {
+    -fx-border-color: -c-acento;
+    -fx-effect: dropshadow(gaussian, rgba(124, 77, 255, 0.25), 8, 0.3, 0, 0);
+}
+
+.campo-con-icono {
+    -fx-padding: 10 12 10 40;
+}
+
+.buscador {
+    -fx-padding: 7 12;
+    -fx-background-color: -c-superficie-2;
+    -fx-border-color: -c-borde;
+}
+
+/* El TextArea lleva dentro un ScrollPane con su propio fondo */
+.text-area .content, .text-area .scroll-pane, .text-area .viewport {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+}
+
+.text-area .content {
+    -fx-padding: 8 10;
+}
+
+.combo-box {
+    -fx-padding: 3 4;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -c-texto;
+    -fx-padding: 5 8;
+}
+
+.combo-box .arrow {
+    -fx-background-color: -c-texto-3;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: -c-superficie;
+    -fx-border-color: -c-borde;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 4;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.18), 18, 0, 0, 6);
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -c-texto;
+    -fx-padding: 7 10;
+    -fx-background-radius: 6;
+}
+
+.combo-box-popup .list-cell:hover, .combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: -c-acento-suave;
+    -fx-text-fill: -c-texto;
+}
+
+.combo-box.filtro {
+    -fx-background-color: -c-superficie-2;
+    -fx-border-color: -c-borde;
+}
+
+.combo-box.filtro .list-cell {
+    -fx-font-size: 12.5px;
+}
+
+/* ================= BOTONES ================= */
+
+.button {
+    -fx-background-color: -c-degradado;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-font-size: 13.5px;
+    -fx-padding: 9 18;
+    -fx-graphic-text-gap: 8;
+    -fx-effect: dropshadow(gaussian, rgba(124, 77, 255, 0.30), 10, 0, 0, 3);
+}
+
+.button .icono {
+    -fx-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: -c-degradado-hover;
+}
+
+/* efecto de "pulsar" */
+.button:pressed, .toggle-button:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+.button:disabled {
+    -fx-opacity: 0.4;
+}
+
+.button.boton-grande {
+    -fx-padding: 12 22;
+    -fx-font-size: 14px;
+}
+
+.button.boton-secundario {
+    -fx-background-color: -c-superficie;
+    -fx-text-fill: -c-texto;
+    -fx-border-color: -c-borde-fuerte;
+    -fx-border-width: 1.2;
+    -fx-effect: null;
+}
+
+.button.boton-secundario .icono {
+    -fx-fill: -c-texto-2;
+}
+
+.button.boton-secundario:hover {
+    -fx-border-color: -c-acento;
+    -fx-text-fill: -c-acento;
+}
+
+.button.boton-fantasma {
+    -fx-background-color: transparent;
+    -fx-text-fill: -c-texto-2;
+    -fx-effect: null;
+}
+
+.button.boton-fantasma .icono {
+    -fx-fill: -c-texto-3;
+}
+
+.button.boton-fantasma:hover {
+    -fx-background-color: -c-superficie-3;
+}
+
+.button.boton-peligro {
+    -fx-background-color: transparent;
+    -fx-text-fill: -c-peligro;
+    -fx-border-color: -c-peligro;
+    -fx-border-width: 1.2;
+    -fx-effect: null;
+}
+
+.button.boton-peligro .icono {
+    -fx-fill: -c-peligro;
+}
+
+.button.boton-peligro:hover {
+    -fx-background-color: -c-peligro-bg;
+}
+
+.button.boton-peligro-lleno {
+    -fx-background-color: -c-peligro;
+    -fx-effect: dropshadow(gaussian, rgba(220, 38, 38, 0.3), 10, 0, 0, 3);
+}
+
+.button.boton-pequeno {
+    -fx-padding: 5 12;
+    -fx-font-size: 12.5px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.button.boton-icono {
+    -fx-background-color: transparent;
+    -fx-padding: 8;
+    -fx-background-radius: 100;
+    -fx-effect: null;
+}
+
+.button.boton-icono .icono {
+    -fx-fill: -c-texto-3;
+}
+
+.button.boton-icono:hover {
+    -fx-background-color: -c-superficie-3;
+}
+
+.button.boton-icono:hover .icono {
+    -fx-fill: -c-acento;
+}
+
+/* la barra lateral usa .opcion-menu tambien para el boton de tema */
+.button.opcion-menu {
+    -fx-background-color: transparent;
+    -fx-effect: null;
+    -fx-padding: 10 14;
+}
+
+.button.opcion-menu:hover {
+    -fx-background-color: -c-superficie-2;
+}
+
+.button.opcion-menu .icono {
+    -fx-fill: -c-texto-3;
+}
+
+/* botones de prioridad del formulario nuevo ticket */
+.segmento {
+    -fx-background-color: -c-superficie;
+    -fx-border-color: -c-borde-fuerte;
+    -fx-border-width: 1.2;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 9 10;
+    -fx-text-fill: -c-texto-2;
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-cursor: hand;
+}
+
+.segmento:hover {
+    -fx-background-color: -c-superficie-2;
+}
+
+.segmento-baja:selected  { -fx-background-color: -c-resuelto-bg; -fx-border-color: -c-resuelto; -fx-text-fill: -c-resuelto; }
+.segmento-media:selected { -fx-background-color: -c-progreso-bg; -fx-border-color: -c-progreso; -fx-text-fill: -c-progreso; }
+.segmento-alta:selected  { -fx-background-color: -c-alta-bg;     -fx-border-color: -c-alta;     -fx-text-fill: -c-alta; }
+
+/* ================= TARJETAS ================= */
+
+.tarjeta {
+    -fx-background-color: -c-superficie;
+    -fx-background-radius: 8;
+    -fx-border-color: -c-borde;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.06), 16, 0, 0, 4);
+}
+
+.root.oscuro .tarjeta {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 16, 0, 0, 4);
+}
+
+.tarjeta-padding {
+    -fx-padding: 20 22;
+}
+
+.tarjeta-cabecera {
+    -fx-padding: 14 18;
+    -fx-border-color: transparent transparent -c-borde transparent;
+}
+
+/* el color de cada tarjeta se elige con una de estas clases */
+.color-abierto  { -c-color: -c-abierto;  -c-color-bg: -c-abierto-bg; }
+.color-progreso { -c-color: -c-progreso; -c-color-bg: -c-progreso-bg; }
+.color-resuelto { -c-color: -c-resuelto; -c-color-bg: -c-resuelto-bg; }
+.color-cerrado  { -c-color: -c-cerrado;  -c-color-bg: -c-cerrado-bg; }
+.color-alta     { -c-color: -c-alta;     -c-color-bg: -c-alta-bg; }
+
+
+/* ================= PILLS ================= */
+
+.pill {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 2 0;
+    -fx-font-size: 12.5px;
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-text-fill: -c-pill;
+}
+
+.pill .punto {
+    -fx-fill: -c-pill;
+}
+
+.pill-abierto   { -c-pill: -c-abierto;  -c-pill-bg: -c-abierto-bg; }
+.pill-progreso  { -c-pill: -c-progreso; -c-pill-bg: -c-progreso-bg; }
+.pill-resuelto  { -c-pill: -c-resuelto; -c-pill-bg: -c-resuelto-bg; }
+.pill-cerrado   { -c-pill: -c-cerrado;  -c-pill-bg: -c-cerrado-bg; }
+.pill-prio-alta  { -c-pill: -c-alta;     -c-pill-bg: -c-alta-bg; }
+.pill-prio-media { -c-pill: -c-progreso; -c-pill-bg: -c-progreso-bg; }
+.pill-prio-baja  { -c-pill: -c-resuelto; -c-pill-bg: -c-resuelto-bg; }
+.pill-neutra     { -c-pill: -c-texto-2;  -c-pill-bg: -c-superficie-3; }
+.pill-rol-cliente { -c-pill: -c-texto-2; -c-pill-bg: -c-superficie-3; }
+.pill-rol-tecnico { -c-pill: -c-abierto; -c-pill-bg: -c-abierto-bg; }
+.pill-rol-admin   { -c-pill: -c-acento;  -c-pill-bg: -c-acento-suave; }
+
+/* ================= TABLAS ================= */
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}
+
+.table-view:focused {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -c-superficie-2;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent -c-borde transparent;
+    -fx-size: 38;
+}
+
+.table-view .column-header .label {
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-font-size: 12.5px;
+    -fx-text-fill: -c-texto-2;
+    -fx-alignment: center-left;
+    -fx-padding: 0 0 0 10;
+}
+
+.table-view .column-header .arrow {
+    -fx-background-color: -c-texto-3;
+}
+
+.table-view .corner {
+    -fx-background-color: -c-superficie-2;
+}
+
+.table-view .placeholder {
+    -fx-padding: 30;
+}
+
+.table-row-cell {
+    -fx-background-color: -c-superficie;
+    -fx-border-color: transparent transparent -c-borde transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-cell-size: 58;
+    -fx-cursor: hand;
+}
+
+.table-row-cell:empty {
+    -fx-background-color: -c-superficie;
+    -fx-border-color: transparent;
+    -fx-cursor: default;
+}
+
+.table-row-cell:filled:hover {
+    -fx-background-color: -c-superficie-2;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: -c-acento-suave;
+}
+
+.table-cell {
+    -fx-text-fill: -c-texto;
+    -fx-alignment: center-left;
+    -fx-padding: 0 10;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: -c-texto;
+}
+
+.celda-titulo {
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-text-fill: -c-texto;
+}
+
+.celda-codigo {
+    -fx-font-family: "IBM Plex Mono";
+    -fx-font-size: 11px;
+    -fx-text-fill: -c-texto-3;
+}
+
+.celda-icono {
+    -fx-background-color: -c-acento-suave;
+    -fx-background-radius: 8;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+    -fx-max-width: 30;
+    -fx-max-height: 30;
+}
+
+.celda-icono .icono {
+    -fx-fill: -c-acento;
+}
+
+/* ================= SCROLL ================= */
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical {
+    -fx-pref-width: 12;
+}
+
+.scroll-bar:horizontal {
+    -fx-pref-height: 12;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: -c-borde-fuerte;
+    -fx-background-radius: 8;
+    -fx-background-insets: 3;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: -c-texto-3;
+}
+
+.scroll-bar .track, .scroll-bar .track-background {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-pref-height: 0;
+    -fx-pref-width: 0;
+}
+
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
+    -fx-padding: 0;
+    -fx-shape: " ";
+}
+
+.scroll-transparente, .scroll-transparente > .viewport {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* ================= ESTADOS VACIOS Y AVISOS ================= */
+
+.vacio-icono {
+    -fx-background-color: -c-acento-suave;
+    -fx-background-radius: 100;
+    -fx-min-width: 58;
+    -fx-min-height: 58;
+    -fx-max-width: 58;
+    -fx-max-height: 58;
+}
+
+.vacio-icono .icono {
+    -fx-fill: -c-acento;
+}
+
+.vacio-titulo {
+    -fx-font-family: "Archivo";
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-text-fill: -c-texto;
+}
+
+.alerta-error {
+    -fx-background-color: -c-peligro-bg;
+    -fx-background-radius: 8;
+    -fx-padding: 10 12;
+}
+
+.alerta-error .label {
+    -fx-text-fill: -c-peligro;
+}
+
+.alerta-error .icono {
+    -fx-fill: -c-peligro;
+}
+
+.alerta-info {
+    -fx-background-color: -c-superficie-3;
+    -fx-background-radius: 8;
+    -fx-padding: 12 14;
+}
+
+.alerta-info .label {
+    -fx-text-fill: -c-texto-2;
+}
+
+.modal-icono {
+    -fx-background-color: -c-acento-suave;
+    -fx-background-radius: 8;
+    -fx-min-width: 44;
+    -fx-min-height: 44;
+    -fx-max-width: 44;
+    -fx-max-height: 44;
+}
+
+.modal-icono .icono {
+    -fx-fill: -c-acento;
+}
+
+.dialogo-icono {
+    -fx-background-color: -c-peligro-bg;
+    -fx-background-radius: 100;
+    -fx-min-width: 46;
+    -fx-min-height: 46;
+    -fx-max-width: 46;
+    -fx-max-height: 46;
+}
+
+.dialogo-icono .icono {
+    -fx-fill: -c-peligro;
+}
+
+/* toasts */
+.toast {
+    -fx-background-color: -c-texto;
+    -fx-background-radius: 8;
+    -fx-padding: 12 18 12 14;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.3), 20, 0, 0, 6);
+}
+
+.toast .label {
+    -fx-text-fill: -c-fondo;
+    -fx-font-family: "Public Sans SemiBold";
+}
+
+.toast-exito .icono {
+    -fx-fill: #4ade80;
+}
+
+.toast-error .icono {
+    -fx-fill: #f87171;
+}
+
+.tooltip {
+    -fx-background-color: #0f172a;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-font-size: 12px;
+    -fx-padding: 5 9;
+}
+
+/* ================= LOGIN ================= */
+
+/* Panel izquierdo: fondo oscuro de la marca con dos brillos suaves.
+   El primer fondo de la lista es el que queda debajo */
+.login-panel-marca {
+    -fx-background-color:
+        #0b1120,
+        radial-gradient(center 90% 0%, radius 70%, rgba(136, 92, 246, 0.42) 0%, rgba(136, 92, 246, 0) 100%),
+        radial-gradient(center 0% 100%, radius 65%, rgba(59, 130, 246, 0.30) 0%, rgba(59, 130, 246, 0) 100%);
+
+    /* colores de las pills en version oscura, solo dentro de este panel */
+    -c-abierto: #8fb2ff;       -c-abierto-bg: rgba(37, 99, 235, 0.22);
+    -c-progreso: #f4c36a;      -c-progreso-bg: rgba(180, 83, 9, 0.25);
+    -c-resuelto: #7ed69d;      -c-resuelto-bg: rgba(21, 128, 61, 0.25);
+    -c-alta: #f79494;          -c-alta-bg: rgba(192, 38, 45, 0.25);
+}
+
+.login-panel-marca .marca-dence {
+    -fx-text-fill: white;
+}
+
+.login-titular {
+    -fx-font-family: "IBM Plex Mono Medium";
+    -fx-font-size: 23px;
+    -fx-text-fill: white;
+}
+
+.login-texto {
+    -fx-font-family: "IBM Plex Mono";
+    -fx-text-fill: #a4aec3;
+    -fx-font-size: 13px;
+    -fx-line-spacing: 3px;
+}
+
+.login-pie {
+    -fx-font-family: "IBM Plex Mono Medium";
+    -fx-font-size: 11px;
+    -fx-text-fill: #6d7a93;
+}
+
+/* tarjetas de ticket "de cristal" */
+/* ventana de terminal del login */
+.term-ventana {
+    -fx-background-color: rgba(8, 12, 24, 0.92);
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(255, 255, 255, 0.12);
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.55), 36, 0, 0, 14);
+}
+
+.term-barra {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 8 8 0 0;
+    -fx-border-color: transparent transparent rgba(255, 255, 255, 0.08) transparent;
+    -fx-padding: 9 12;
+}
+
+.term-rojo { -fx-fill: #ff5f57; }
+.term-amarillo { -fx-fill: #febc2e; }
+.term-verde { -fx-fill: #28c840; }
+
+.term-titulo {
+    -fx-font-family: "IBM Plex Mono";
+    -fx-font-size: 11px;
+    -fx-text-fill: #6d7a93;
+}
+
+.term-cuerpo {
+    -fx-padding: 14 16;
+}
+
+.term-texto {
+    -fx-font-family: "IBM Plex Mono";
+    -fx-font-size: 12.5px;
+}
+
+.term-prompt   { -fx-fill: #a78bfa; }
+.term-comando  { -fx-fill: #e7eaf3; }
+.term-programa { -fx-fill: #c4b5fd; }
+.term-opcion   { -fx-fill: #67e8f9; }
+.term-id       { -fx-fill: #fcd34d; }
+.term-cadena   { -fx-fill: #86efac; }
+.term-ok       { -fx-fill: #4ade80; }
+.term-flecha   { -fx-fill: #60a5fa; }
+.term-salida   { -fx-fill: #8e98a8; }
+
+.term-cursor {
+    -fx-background-color: #a78bfa;
+    -fx-translate-y: 2;
+}
+
+.login-comentario {
+    -fx-font-family: "IBM Plex Mono";
+    -fx-font-size: 12.5px;
+    -fx-text-fill: #a78bfa;
+}
+
+.login-lado-formulario {
+    -fx-background-color: -c-superficie;
+    -fx-padding: 40 40 24 40;
+}
+
+/* pantalla de bienvenida al arrancar */
+.bienvenida {
+    -fx-background-color:
+        #0b1120,
+        radial-gradient(center 50% 45%, radius 55%, rgba(136, 92, 246, 0.35) 0%, rgba(136, 92, 246, 0) 100%);
+}
+
+.bienvenida-nombre {
+    -fx-font-family: "Archivo ExtraBold";
+    -fx-font-size: 44px;
+}
+
+.bienvenida-dence {
+    -fx-text-fill: white;
+}
+
+/* ================= DETALLE DEL TICKET ================= */
+
+.linea-estados {
+    -fx-background-color: -c-superficie;
+    -fx-background-radius: 8;
+    -fx-border-color: -c-borde;
+    -fx-border-radius: 8;
+    -fx-padding: 14 18;
+}
+
+.paso-circulo {
+    -fx-background-color: -c-superficie-2;
+    -fx-border-color: -c-borde-fuerte;
+    -fx-border-width: 1.5;
+    -fx-background-radius: 100;
+    -fx-border-radius: 100;
+    -fx-min-width: 28;
+    -fx-min-height: 28;
+    -fx-max-width: 28;
+    -fx-max-height: 28;
+}
+
+.paso-numero {
+    -fx-font-family: "IBM Plex Mono Medium";
+    -fx-font-size: 12px;
+    -fx-text-fill: -c-texto-3;
+}
+
+.paso-texto {
+    -fx-text-fill: -c-texto-3;
+    -fx-font-family: "Public Sans SemiBold";
+}
+
+.paso.hecho .paso-circulo {
+    -fx-background-color: -c-degradado;
+    -fx-border-color: transparent;
+}
+
+.paso.hecho .icono {
+    -fx-fill: white;
+}
+
+.paso.hecho .paso-texto {
+    -fx-text-fill: -c-texto-2;
+}
+
+.paso.actual .paso-circulo {
+    -fx-background-color: -c-acento-suave;
+    -fx-border-color: -c-acento;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(124, 77, 255, 0.35), 10, 0.2, 0, 0);
+}
+
+.paso.actual .paso-numero, .paso.actual .paso-texto {
+    -fx-text-fill: -c-acento;
+}
+
+.paso-linea {
+    -fx-min-height: 2;
+    -fx-max-height: 2;
+    -fx-background-color: -c-borde;
+    -fx-background-radius: 1;
+}
+
+.paso-linea.hecha {
+    -fx-background-color: -c-degradado;
+}
+
+.comentario-burbuja {
+    -fx-background-color: -c-superficie;
+    -fx-border-color: -c-borde;
+    -fx-background-radius: 2 8 8 8;
+    -fx-border-radius: 2 8 8 8;
+    -fx-padding: 11 14;
+}
+
+.comentario-soporte {
+    -fx-background-color: -c-abierto-bg;
+    -fx-border-color: transparent;
+}
+
+.comentario-mio {
+    -fx-background-color: -c-acento-suave;
+    -fx-border-color: -c-acento-borde;
+    -fx-background-radius: 8 2 8 8;
+    -fx-border-radius: 8 2 8 8;
+}
+
+.comentario-autor {
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-font-size: 13px;
+}
+
+.comentario-rol {
+    -fx-font-family: "IBM Plex Mono";
+    -fx-font-size: 10.5px;
+    -fx-text-fill: -c-acento;
+}
+
+.comentario-fecha {
+    -fx-font-family: "IBM Plex Mono";
+    -fx-font-size: 10.5px;
+    -fx-text-fill: -c-texto-3;
+}
+
+.comentario-texto {
+    -fx-line-spacing: 2px;
+}
+
+/* ================= DETALLES FINALES ================= */
+
+/* los botones principales brillan un poco mas al pasar el raton */
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(124, 77, 255, 0.45), 16, 0, 0, 5);
+}
+
+.button.boton-secundario:hover, .button.boton-fantasma:hover, .button.boton-peligro:hover,
+.button.boton-icono:hover, .button.opcion-menu:hover {
+    -fx-effect: null;
+}
+
+/* raya de color a la izquierda de la fila que tiene el raton encima.
+   Con dos fondos e insets, asi el contenido no se mueve */
+.table-row-cell:filled:hover {
+    -fx-background-color: -c-acento, -c-superficie-2;
+    -fx-background-insets: 0, 0 0 0 3;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: -c-acento, -c-acento-suave;
+    -fx-background-insets: 0, 0 0 0 3;
+}
+
+/* ================= NOTAS INTERNAS ================= */
+
+.comentario-interno {
+    -fx-background-color: -c-progreso-bg;
+    -fx-border-color: -c-progreso;
+    -fx-border-style: segments(6, 4);
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.etiqueta-interna {
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-font-size: 11.5px;
+    -fx-text-fill: -c-progreso;
+    -fx-graphic-text-gap: 4;
+}
+
+.etiqueta-interna .icono {
+    -fx-fill: -c-progreso;
+}
+
+.check-box {
+    -fx-text-fill: -c-texto-2;
+    -fx-cursor: hand;
+}
+
+.check-box .box {
+    -fx-background-color: -c-superficie;
+    -fx-border-color: -c-borde-fuerte;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.check-box:selected .box {
+    -fx-background-color: -c-acento;
+    -fx-border-color: -c-acento;
+}
+
+.check-box .mark {
+    -fx-background-color: white;
+}
+
+/* ================= HISTORIAL DE ACTIVIDAD ================= */
+
+.actividad-punto {
+    -fx-background-color: -c-superficie-3;
+    -fx-background-radius: 100;
+    -fx-min-width: 26;
+    -fx-min-height: 26;
+    -fx-max-width: 26;
+    -fx-max-height: 26;
+}
+
+.actividad-punto .icono {
+    -fx-fill: -c-texto-2;
+}
+
+.actividad-creado { -fx-background-color: -c-abierto-bg; }
+.actividad-creado .icono { -fx-fill: -c-abierto; }
+.actividad-asignado { -fx-background-color: -c-acento-suave; }
+.actividad-asignado .icono { -fx-fill: -c-acento; }
+.actividad-estado { -fx-background-color: -c-progreso-bg; }
+.actividad-estado .icono { -fx-fill: -c-progreso; }
+
+.actividad-texto {
+    -fx-font-size: 13px;
+    -fx-text-fill: -c-texto;
+}
+
+/* ================= TABLERO KANBAN ================= */
+
+.color-acento { -c-color: -c-acento; -c-color-bg: -c-acento-suave; }
+
+.kanban-columna {
+    -fx-background-color: -c-superficie-2;
+    -fx-background-radius: 8;
+    -fx-border-color: -c-color;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 8;
+}
+
+/* el color de la columna lo pone el borde de toda la columna */
+.kanban-cabecera {
+    -fx-padding: 12 14;
+}
+
+.kanban-titulo {
+    -fx-font-family: "Archivo";
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: -c-texto;
+}
+
+.kanban-contador {
+    -fx-text-fill: -c-color;
+    -fx-font-family: "IBM Plex Mono Medium";
+    -fx-font-size: 12px;
+}
+
+.kanban-tarjeta {
+    -fx-background-color: -c-superficie;
+    -fx-background-radius: 8;
+    -fx-border-color: -c-borde;
+    -fx-border-radius: 8;
+    -fx-padding: 12 13;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.07), 8, 0, 0, 2);
+}
+
+.kanban-tarjeta:hover {
+    -fx-border-color: -c-acento-borde;
+}
+
+.kanban-tarjeta-titulo {
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-text-fill: -c-texto;
+}
+
+.kanban-tarjeta-pie {
+    -fx-font-size: 12.5px;
+    -fx-text-fill: -c-texto-2;
+}
+
+/* columna sobre la que se esta arrastrando una tarjeta */
+.kanban-destino {
+    -fx-background-color: -c-acento-suave;
+    -fx-border-color: -c-acento;
+    -fx-border-style: segments(7, 5);
+}
+
+/* ================= RESUMEN DEL ADMIN ================= */
+
+.punto-leyenda {
+    -fx-background-color: -c-color;
+    -fx-background-radius: 100;
+    -fx-min-width: 9;
+    -fx-min-height: 9;
+    -fx-max-width: 9;
+    -fx-max-height: 9;
+}
+
+.leyenda-numero {
+    -fx-font-family: "Archivo ExtraBold";
+    -fx-font-size: 26px;
+    -fx-text-fill: -c-texto;
+}
+
+.sla-porcentaje {
+    -fx-font-family: "Archivo ExtraBold";
+    -fx-font-size: 34px;
+    -fx-text-fill: -c-texto;
+}
+
+.sla-alerta-roja .label { -fx-text-fill: -c-alta; -fx-font-family: "Public Sans SemiBold"; }
+.sla-alerta-roja .icono { -fx-fill: -c-alta; }
+.sla-alerta-ambar .label { -fx-text-fill: -c-progreso; -fx-font-family: "Public Sans SemiBold"; }
+.sla-alerta-ambar .icono { -fx-fill: -c-progreso; }
+
+/* ================= PANEL DE METRICAS ================= */
+
+.metrica {
+    -fx-padding: 16 22;
+}
+
+.metrica-raya {
+    -fx-background-color: -c-borde;
+    -fx-min-width: 1;
+    -fx-max-width: 1;
+    -fx-min-height: 44;
+    -fx-max-height: 44;
+}
+
+.metrica-clicable {
+    -fx-cursor: hand;
+}
+
+.metrica-clicable:hover {
+    -fx-background-color: -c-superficie-2;
+}
+
+/* el estado que se esta usando de filtro lleva una raya de su color debajo */
+.metrica-seleccionada {
+    -fx-background-color: -c-superficie-2;
+    -fx-border-color: transparent transparent -c-color transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+/* ================= VALORACION CON ESTRELLAS ================= */
+
+.estrella-llena .icono { -fx-fill: -c-estrella; }
+.estrella-vacia .icono { -fx-fill: -c-borde-fuerte; }
+
+.button.estrella-boton {
+    -fx-background-color: transparent;
+    -fx-effect: null;
+    -fx-padding: 2;
+}
+
+.estrella-boton .icono { -fx-fill: -c-borde-fuerte; }
+.estrella-boton:hover .icono { -fx-fill: -c-estrella; }
+.estrella-boton.llena .icono { -fx-fill: -c-estrella; }
+
+/* tarjeta que pide una accion al usuario: borde del color de la marca */
+.tarjeta-destacada {
+    -fx-border-color: -c-acento;
+    -fx-border-width: 1.5;
+}
+
+/* ================= AVISOS ================= */
+
+.badge-aviso {
+    -fx-background-color: -c-peligro;
+    -fx-text-fill: white;
+    -fx-background-radius: 100;
+    -fx-min-width: 17;
+    -fx-min-height: 17;
+    -fx-alignment: center;
+    -fx-padding: 0 4;
+    -fx-font-family: "Public Sans";
+    -fx-font-weight: bold;
+    -fx-font-size: 10px;
+    -fx-translate-x: 2;
+    -fx-translate-y: -2;
+}
+
+.aviso-fila {
+    -fx-padding: 14 24;
+    -fx-border-color: transparent transparent -c-borde transparent;
+    -fx-cursor: hand;
+}
+
+.aviso-fila:hover {
+    -fx-background-color: -c-superficie-2;
+}
+
+.aviso-punto {
+    -fx-background-color: -c-acento;
+    -fx-background-radius: 100;
+    -fx-min-width: 8;
+    -fx-min-height: 8;
+    -fx-max-width: 8;
+    -fx-max-height: 8;
+    -fx-translate-y: 6;
+}
+
+.aviso-texto {
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-text-fill: -c-texto;
+}
+
+.aviso-texto-leido {
+    -fx-text-fill: -c-texto-2;
+}
+
+/* ================= BUSCADOR (Ctrl+K) ================= */
+
+.button.boton-buscar {
+    -fx-background-color: -c-superficie-2;
+    -fx-border-color: -c-borde;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 9 14;
+    -fx-effect: null;
+    -fx-text-fill: -c-texto-3;
+}
+
+.button.boton-buscar:hover {
+    -fx-border-color: -c-borde-fuerte;
+}
+
+.button.boton-buscar .icono { -fx-fill: -c-texto-3; }
+
+.atajo-teclado {
+    -fx-font-family: "IBM Plex Mono";
+    -fx-font-size: 10.5px;
+    -fx-text-fill: -c-texto-3;
+    -fx-border-color: -c-borde;
+    -fx-border-radius: 4;
+    -fx-padding: 1 5;
+}
+
+.buscador-cabecera {
+    -fx-padding: 14 20;
+    -fx-border-color: transparent transparent -c-borde transparent;
+}
+
+.text-field.buscador-campo {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-effect: null;
+    -fx-font-size: 16px;
+    -fx-padding: 6 0;
+}
+
+.text-field.buscador-campo:focused {
+    -fx-border-color: transparent;
+    -fx-effect: null;
+}
+
+.buscador-lista {
+    -fx-background-color: transparent;
+    -fx-padding: 6;
+}
+
+.buscador-lista .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 10 14;
+    -fx-background-radius: 8;
+}
+
+.buscador-lista .list-cell:filled:selected {
+    -fx-background-color: -c-acento-suave;
+}
+
+.buscador-lista .list-cell:filled:hover {
+    -fx-background-color: -c-superficie-2;
+}
+
+.buscador-lista .list-cell:filled:selected .label {
+    -fx-text-fill: -c-texto;
+}
+
+.buscador-pie {
+    -fx-padding: 10 20;
+    -fx-border-color: -c-borde transparent transparent transparent;
+}
+
+/* ================= GRAFICAS ================= */
+
+.punto-leyenda.color-acento { -fx-background-color: -c-acento; }
+
+.donut-pista {
+    -fx-fill: transparent;
+    -fx-stroke: -c-superficie-3;
+    -fx-stroke-width: 22;
+}
+
+.donut-arco {
+    -fx-fill: transparent;
+    -fx-stroke: -c-color;
+    -fx-stroke-width: 22;
+    -fx-stroke-line-cap: butt;
+}
+
+.donut-total {
+    -fx-font-family: "Archivo ExtraBold";
+    -fx-font-size: 30px;
+    -fx-text-fill: -c-texto;
+}
+
+.donut-numero {
+    -fx-font-family: "Archivo ExtraBold";
+    -fx-font-size: 18px;
+    -fx-text-fill: -c-texto;
+}
+
+/* los graficos de JavaFX: fondos transparentes y los colores de la app */
+.chart {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.chart-content {
+    -fx-padding: 6 0 0 0;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart .axis {
+    -fx-tick-label-fill: -c-texto-3;
+    -fx-font-family: "Public Sans";
+    -fx-font-size: 11.5px;
+}
+
+.chart .axis-tick-mark, .chart .axis-minor-tick-mark {
+    -fx-stroke: transparent;
+}
+
+.chart .axis:left, .chart .axis:bottom {
+    -fx-border-color: transparent;
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: -c-borde;
+    -fx-stroke-dash-array: 3 4;
+}
+
+.grafico-actividad .default-color0.chart-series-line {
+    -fx-stroke: -c-acento;
+    -fx-stroke-width: 2.5;
+}
+
+.grafico-actividad .default-color1.chart-series-line {
+    -fx-stroke: -c-resuelto;
+    -fx-stroke-width: 2.5;
+}
+
+.grafico-actividad .default-color0.chart-line-symbol {
+    -fx-background-color: -c-acento, -c-superficie;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 6px;
+    -fx-padding: 4px;
+}
+
+.grafico-actividad .default-color1.chart-line-symbol {
+    -fx-background-color: -c-resuelto, -c-superficie;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 6px;
+    -fx-padding: 4px;
+}
+
+.grafico-categorias .chart-bar {
+    -fx-bar-fill: -c-acento;
+    -fx-background-radius: 0 4 4 0;
+}
+
+.grafico-categorias .axis {
+    -fx-tick-label-fill: -c-texto;
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-font-size: 12.5px;
+}
+
+.grafico-numero-barra {
+    -fx-font-family: "IBM Plex Mono Medium";
+    -fx-font-size: 12px;
+    -fx-fill: -c-texto-2;
+}
+
+/* la linea oscura del eje: se quita con selectores mas especificos que los del tema por defecto */
+.chart-content .axis, .chart-content .axis:left, .chart-content .axis:bottom, .bar-chart .axis:left, .line-chart .axis:left {
+    -fx-border-color: transparent;
+}
+
+.chart-content .axis .axis-line {
+    -fx-stroke: transparent;
+}
+
+/* la linea oscura que se veia era la "linea del cero" del grafico, no el eje */
+.chart-horizontal-zero-line, .chart-vertical-zero-line {
+    -fx-stroke: -c-borde-fuerte;
+    -fx-stroke-width: 1;
+}
+
+.grafico-categorias .chart-vertical-zero-line {
+    -fx-stroke: -c-borde;
+}
+
+/* los puntos de la contraseña salian enormes: JavaFX los dibuja con la tipografia del campo,
+   y la de la app tiene un punto muy grande. Con una tipografia y un tamaño propios quedan discretos */
+.password-field {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 11px;
+}
+
+/* los dos campos del login con la misma altura (el de contraseña tiene otra tipografia) */
+.text-field.campo-con-icono, .password-field.campo-con-icono {
+    -fx-min-height: 38px;
+}
+
+.tarjeta-usuario-clicable {
+    -fx-cursor: hand;
+}
+
+.tarjeta-usuario-clicable:hover {
+    -fx-border-color: -c-borde-fuerte;
+}
+
+/* ================= ADJUNTOS ================= */
+
+.miniatura {
+    -fx-background-color: -c-superficie-3;
+    -fx-border-color: -c-borde;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.miniatura-caja {
+    -fx-cursor: hand;
+}
+
+.miniatura-caja:hover .miniatura {
+    -fx-border-color: -c-acento;
+}
+
+.chip-archivo {
+    -fx-background-color: -c-superficie-2;
+    -fx-border-color: -c-borde;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 4 4 4 10;
+}
+
+.chip-archivo .icono { -fx-fill: -c-texto-3; }
+
+.visor-fondo {
+    -fx-background-color: -c-superficie-3;
+    -fx-padding: 18;
+}
+
+/* ================= FOCO CON TECLADO ================= */
+
+/* solo cuando se ha pulsado Tab (ver Tema.aplicar); con el raton no sale */
+.root.teclado .button:focused,
+.root.teclado .toggle-button:focused,
+.root.teclado .combo-box:focused,
+.root.teclado .check-box:focused > .box {
+    -fx-effect: dropshadow(gaussian, rgba(124, 77, 255, 0.85), 5, 0.75, 0, 0);
+}
+
+/* ================= AVISO DE ACCION (cliente) ================= */
+
+.aviso-accion {
+    -fx-background-color: -c-acento-suave;
+    -fx-border-color: -c-acento;
+    -fx-border-width: 1.2;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 14 18;
+}
+
+.aviso-accion .icono {
+    -fx-fill: -c-acento;
+}
+
+.aviso-accion-titulo {
+    -fx-font-family: "Public Sans SemiBold";
+    -fx-font-size: 15px;
+    -fx-text-fill: -c-texto;
+}
+

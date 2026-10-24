@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="grad" x1="15%" y1="10%" x2="90%" y2="95%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="50%" stop-color="#885CF6"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <mask id="ticketMask">
+      <rect x="87" y="102" width="106" height="70" rx="14" fill="#ffffff"/>
+      <circle cx="87" cy="137" r="11" fill="#000000"/>
+      <circle cx="193" cy="137" r="11" fill="#000000"/>
+    </mask>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="260" fill="#0B1220"/>
+
+  <!-- icono -->
+  <circle cx="140" cy="137" r="98" fill="none" stroke="url(#grad)" stroke-width="10.5"/>
+  <rect x="87" y="102" width="106" height="70" rx="14" fill="url(#grad)" mask="url(#ticketMask)"/>
+  <circle cx="140" cy="118.5" r="6.3" fill="#ffffff"/>
+  <rect x="133.7" y="132" width="12.6" height="28" rx="6.3" fill="#ffffff"/>
+
+  <!-- wordmark -->
+  <text x="300" y="150" font-size="72" font-weight="800" fill="url(#grad)">IT<tspan fill="#ffffff">dence</tspan></text>
+  <text x="303" y="192" font-size="20" font-weight="600" letter-spacing="3" fill="#B9C2D0">SOPORTE T&#201;CNICO &#183; INCIDENCIAS</text>
+</svg>

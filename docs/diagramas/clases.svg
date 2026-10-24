@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="1010" viewBox="0 0 940 1010"><defs>
+      <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker>
+      <marker id="flechaMorada" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6D3FD6"/></marker>
+      <marker id="triangulo" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse"><path d="M0 0 L12 6 L0 12 z" fill="#fff" stroke="#475569" stroke-width="1.3"/></marker>
+      <marker id="rombo" viewBox="0 0 14 10" refX="1" refY="5" markerWidth="13" markerHeight="9" orient="auto-start-reverse"><path d="M0 5 L7 0 L14 5 L7 10 z" fill="#475569"/></marker>
+    </defs><rect width="100%" height="100%" fill="#fff"/><text x="470" y="24" font-size="16" font-weight="700" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Diagrama de clases del modelo de ITdence</text>
+<rect x="20" y="50" width="250" height="122" rx="7" fill="#FFFFFF" stroke="#6D3FD6" stroke-width="1.8"/>
+<path d="M20 78 V57 Q20 50 27 50 H263 Q270 50 270 57 V78 Z" fill="#6D3FD6"/>
+<text x="145" y="69" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Usuario</text>
+<text x="30" y="92.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- id: int</text>
+<rect x="21" y="96" width="248" height="18" fill="#F6F7FB"/>
+<text x="30" y="110.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- nombre: String</text>
+<text x="30" y="128.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- email: String</text>
+<rect x="21" y="132" width="248" height="18" fill="#F6F7FB"/>
+<text x="30" y="146.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- contrasenaHash: String</text>
+<text x="30" y="164.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- rol: String</text>
+<rect x="680" y="50" width="240" height="86" rx="7" fill="#FFFFFF" stroke="#6D3FD6" stroke-width="1.8"/>
+<path d="M680 78 V57 Q680 50 687 50 H913 Q920 50 920 57 V78 Z" fill="#6D3FD6"/>
+<text x="800" y="69" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Categoria</text>
+<text x="690" y="92.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- id: int</text>
+<rect x="681" y="96" width="238" height="18" fill="#F6F7FB"/>
+<text x="690" y="110.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- nombre: String</text>
+<text x="690" y="128.5" font-size="11.5" font-weight="400" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">+ toString(): String</text>
+<rect x="680" y="150" width="240" height="86" rx="7" fill="#FFFFFF" stroke="#475569" stroke-width="1.8"/>
+<path d="M680 178 V157 Q680 150 687 150 H913 Q920 150 920 157 V178 Z" fill="#475569"/>
+<text x="800" y="169" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Plantilla</text>
+<text x="690" y="192.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- id: int</text>
+<rect x="681" y="196" width="238" height="18" fill="#F6F7FB"/>
+<text x="690" y="210.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- titulo: String</text>
+<text x="690" y="228.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- texto: String</text>
+<rect x="360" y="250" width="300" height="356" rx="7" fill="#FFFFFF" stroke="#6D3FD6" stroke-width="1.8"/>
+<path d="M360 278 V257 Q360 250 367 250 H653 Q660 250 660 257 V278 Z" fill="#6D3FD6"/>
+<text x="510" y="269" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Ticket</text>
+<text x="370" y="292.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- id: int</text>
+<rect x="361" y="296" width="298" height="18" fill="#F6F7FB"/>
+<text x="370" y="310.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- titulo: String</text>
+<text x="370" y="328.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- descripcion: String</text>
+<rect x="361" y="332" width="298" height="18" fill="#F6F7FB"/>
+<text x="370" y="346.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- prioridad: String</text>
+<text x="370" y="364.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- estado: String</text>
+<rect x="361" y="368" width="298" height="18" fill="#F6F7FB"/>
+<text x="370" y="382.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- categoriaId: int</text>
+<text x="370" y="400.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- creadorId: int</text>
+<rect x="361" y="404" width="298" height="18" fill="#F6F7FB"/>
+<text x="370" y="418.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- tecnicoAsignadoId: Integer</text>
+<text x="370" y="436.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- fechaCreacion: String</text>
+<rect x="361" y="440" width="298" height="18" fill="#F6F7FB"/>
+<text x="370" y="454.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- fechaActualizacion: String</text>
+<text x="370" y="472.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- fechaLimite: String</text>
+<rect x="361" y="476" width="298" height="18" fill="#F6F7FB"/>
+<text x="370" y="490.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- fechaResolucion: String</text>
+<text x="370" y="508.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- valoracion: Integer</text>
+<rect x="361" y="512" width="298" height="18" fill="#F6F7FB"/>
+<text x="370" y="526.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- reaperturas: int</text>
+<text x="370" y="544.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- cancelado: boolean</text>
+<rect x="361" y="548" width="298" height="18" fill="#F6F7FB"/>
+<text x="370" y="562.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- categoriaNombre, creadorNombre,</text>
+<text x="370" y="580.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- tecnicoNombre: String</text>
+<rect x="361" y="584" width="298" height="18" fill="#F6F7FB"/>
+<text x="370" y="598.5" font-size="11.5" font-weight="400" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">+ getCodigo(): String</text>
+<rect x="680" y="285" width="240" height="122" rx="7" fill="#FFFFFF" stroke="#15803D" stroke-width="1.8"/>
+<path d="M680 313 V292 Q680 285 687 285 H913 Q920 285 920 292 V313 Z" fill="#15803D"/>
+<text x="800" y="304" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">«utility» Sla</text>
+<text x="690" y="327.5" font-size="11.5" font-weight="400" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">+ horas(prioridad): int</text>
+<rect x="681" y="331" width="238" height="18" fill="#F6F7FB"/>
+<text x="690" y="345.5" font-size="11.5" font-weight="400" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">+ situacion(t, ahora): Situacion</text>
+<text x="690" y="363.5" font-size="11.5" font-weight="400" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">+ texto(t, ahora): String</text>
+<rect x="681" y="367" width="238" height="18" fill="#F6F7FB"/>
+<text x="690" y="381.5" font-size="11.5" font-weight="400" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">+ duracion(d): String</text>
+<text x="690" y="399.5" font-size="11.5" font-weight="400" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">+ parsear(fecha): LocalDateTime</text>
+<rect x="680" y="440" width="240" height="86" rx="7" fill="#FFFFFF" stroke="#15803D" stroke-width="1.8"/>
+<path d="M680 468 V447 Q680 440 687 440 H913 Q920 440 920 447 V468 Z" fill="#15803D"/>
+<text x="800" y="459" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">«enumeration» Situacion</text>
+<text x="690" y="482.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">EN_PLAZO, POR_VENCER,</text>
+<rect x="681" y="486" width="238" height="18" fill="#F6F7FB"/>
+<text x="690" y="500.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">VENCIDO, CUMPLIDO,</text>
+<text x="690" y="518.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">INCUMPLIDO, CANCELADO</text>
+<path d="M680 330 L660 330" fill="none" stroke="#15803D" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#flecha)"/>
+<path d="M800 407 L800 440" fill="none" stroke="#15803D" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#flecha)"/>
+<rect x="20" y="760" width="205" height="176" rx="7" fill="#FFFFFF" stroke="#6D3FD6" stroke-width="1.8"/>
+<path d="M20 788 V767 Q20 760 27 760 H218 Q225 760 225 767 V788 Z" fill="#6D3FD6"/>
+<text x="122.5" y="779" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Comentario</text>
+<text x="30" y="802.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- id: int</text>
+<rect x="21" y="806" width="203" height="18" fill="#F6F7FB"/>
+<text x="30" y="820.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- ticketId: int</text>
+<text x="30" y="838.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- usuarioId: int</text>
+<rect x="21" y="842" width="203" height="18" fill="#F6F7FB"/>
+<text x="30" y="856.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- texto: String</text>
+<text x="30" y="874.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- fecha: String</text>
+<rect x="21" y="878" width="203" height="18" fill="#F6F7FB"/>
+<text x="30" y="892.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- autorNombre: String</text>
+<text x="30" y="910.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- autorRol: String</text>
+<rect x="21" y="914" width="203" height="18" fill="#F6F7FB"/>
+<text x="30" y="928.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- interno: boolean</text>
+<rect x="235" y="760" width="205" height="158" rx="7" fill="#FFFFFF" stroke="#6D3FD6" stroke-width="1.8"/>
+<path d="M235 788 V767 Q235 760 242 760 H433 Q440 760 440 767 V788 Z" fill="#6D3FD6"/>
+<text x="337.5" y="779" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Actividad</text>
+<text x="245" y="802.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- id: int</text>
+<rect x="236" y="806" width="203" height="18" fill="#F6F7FB"/>
+<text x="245" y="820.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- ticketId: int</text>
+<text x="245" y="838.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- usuarioId: int</text>
+<rect x="236" y="842" width="203" height="18" fill="#F6F7FB"/>
+<text x="245" y="856.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- tipo: String</text>
+<text x="245" y="874.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- detalle: String</text>
+<rect x="236" y="878" width="203" height="18" fill="#F6F7FB"/>
+<text x="245" y="892.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- fecha: String</text>
+<text x="245" y="910.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- usuarioNombre: String</text>
+<rect x="450" y="760" width="205" height="176" rx="7" fill="#FFFFFF" stroke="#6D3FD6" stroke-width="1.8"/>
+<path d="M450 788 V767 Q450 760 457 760 H648 Q655 760 655 767 V788 Z" fill="#6D3FD6"/>
+<text x="552.5" y="779" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Adjunto</text>
+<text x="460" y="802.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- id: int</text>
+<rect x="451" y="806" width="203" height="18" fill="#F6F7FB"/>
+<text x="460" y="820.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- ticketId: int</text>
+<text x="460" y="838.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- usuarioId: int</text>
+<rect x="451" y="842" width="203" height="18" fill="#F6F7FB"/>
+<text x="460" y="856.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- nombre: String</text>
+<text x="460" y="874.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- archivo: String</text>
+<rect x="451" y="878" width="203" height="18" fill="#F6F7FB"/>
+<text x="460" y="892.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- tamano: long</text>
+<text x="460" y="910.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- fecha: String</text>
+<rect x="451" y="914" width="203" height="18" fill="#F6F7FB"/>
+<text x="460" y="928.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- usuarioNombre: String</text>
+<rect x="665" y="760" width="205" height="158" rx="7" fill="#FFFFFF" stroke="#6D3FD6" stroke-width="1.8"/>
+<path d="M665 788 V767 Q665 760 672 760 H863 Q870 760 870 767 V788 Z" fill="#6D3FD6"/>
+<text x="767.5" y="779" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Notificacion</text>
+<text x="675" y="802.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- id: int</text>
+<rect x="666" y="806" width="203" height="18" fill="#F6F7FB"/>
+<text x="675" y="820.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- usuarioId: int</text>
+<text x="675" y="838.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- ticketId: int</text>
+<rect x="666" y="842" width="203" height="18" fill="#F6F7FB"/>
+<text x="675" y="856.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- texto: String</text>
+<text x="675" y="874.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- leida: boolean</text>
+<rect x="666" y="878" width="203" height="18" fill="#F6F7FB"/>
+<text x="675" y="892.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- fecha: String</text>
+<text x="675" y="910.5" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">- ticketTitulo: String</text>
+<path d="M510 606 L510 712" fill="none" stroke="#6D3FD6" stroke-width="1.8"/>
+<path d="M190 712 L835 712" fill="none" stroke="#6D3FD6" stroke-width="1.8"/>
+<path d="M190 712 L190 760" fill="none" stroke="#6D3FD6" stroke-width="1.8"/>
+<text x="196" y="754" font-size="15" font-weight="700" fill="#6D3FD6" text-anchor="start" font-family="Arial, Helvetica, sans-serif">*</text>
+<path d="M405 712 L405 760" fill="none" stroke="#6D3FD6" stroke-width="1.8"/>
+<text x="411" y="754" font-size="15" font-weight="700" fill="#6D3FD6" text-anchor="start" font-family="Arial, Helvetica, sans-serif">*</text>
+<path d="M620 712 L620 760" fill="none" stroke="#6D3FD6" stroke-width="1.8"/>
+<text x="626" y="754" font-size="15" font-weight="700" fill="#6D3FD6" text-anchor="start" font-family="Arial, Helvetica, sans-serif">*</text>
+<path d="M835 712 L835 760" fill="none" stroke="#6D3FD6" stroke-width="1.8"/>
+<text x="841" y="754" font-size="15" font-weight="700" fill="#6D3FD6" text-anchor="start" font-family="Arial, Helvetica, sans-serif">*</text>
+<text x="516" y="624" font-size="12" font-weight="700" fill="#6D3FD6" text-anchor="start" font-family="Arial, Helvetica, sans-serif">1</text>
+<path d="M60 172 L60 738 L705 738" fill="none" stroke="#2F6FE4" stroke-width="1.8"/>
+<path d="M60 738 L60 760" fill="none" stroke="#2F6FE4" stroke-width="1.8"/>
+<text x="66" y="754" font-size="15" font-weight="700" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">*</text>
+<path d="M275 738 L275 760" fill="none" stroke="#2F6FE4" stroke-width="1.8"/>
+<text x="281" y="754" font-size="15" font-weight="700" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">*</text>
+<path d="M490 738 L490 760" fill="none" stroke="#2F6FE4" stroke-width="1.8"/>
+<text x="496" y="754" font-size="15" font-weight="700" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">*</text>
+<path d="M705 738 L705 760" fill="none" stroke="#2F6FE4" stroke-width="1.8"/>
+<text x="711" y="754" font-size="15" font-weight="700" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">*</text>
+<text x="66" y="188" font-size="12" font-weight="700" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">1</text>
+<path d="M270 90 L318 90 L318 420 L360 420" fill="none" stroke="#2F6FE4" stroke-width="1.8"/>
+<path d="M270 126 L296 126 L296 445 L360 445" fill="none" stroke="#2F6FE4" stroke-width="1.8"/>
+<text x="276" y="84" font-size="12" font-weight="700" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">1</text>
+<text x="276" y="120" font-size="11" font-weight="700" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">0..1</text>
+<text x="346" y="414" font-size="15" font-weight="700" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">*</text>
+<text x="346" y="439" font-size="15" font-weight="700" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif">*</text>
+<text x="311" y="240" font-size="11.5" font-weight="400" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif" transform="rotate(-90 311 240)">creador</text>
+<text x="289" y="240" font-size="11.5" font-weight="400" fill="#2F6FE4" text-anchor="start" font-family="Arial, Helvetica, sans-serif" transform="rotate(-90 289 240)">técnico asignado</text>
+<path d="M680 80 L510 80 L510 250" fill="none" stroke="#6D3FD6" stroke-width="1.8"/>
+<text x="666" y="74" font-size="12" font-weight="700" fill="#6D3FD6" text-anchor="start" font-family="Arial, Helvetica, sans-serif">1</text>
+<text x="516" y="244" font-size="15" font-weight="700" fill="#6D3FD6" text-anchor="start" font-family="Arial, Helvetica, sans-serif">*</text>
+<text x="20" y="975" font-size="11" font-weight="400" fill="#6B7280" text-anchor="start" font-family="Arial, Helvetica, sans-serif">Los atributos son privados y cada clase tiene sus getters y setters (no se dibujan para que quepa). Las asociaciones salen de las claves foráneas de la base de datos.</text>
+<path d="M20 996 L60 996" fill="none" stroke="#6D3FD6" stroke-width="1.8"/>
+<text x="66" y="1000" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">con ticket</text>
+<path d="M170 996 L210 996" fill="none" stroke="#2F6FE4" stroke-width="1.8"/>
+<text x="216" y="1000" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">con usuario</text>
+<path d="M320 996 L360 996" fill="none" stroke="#15803D" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#flecha)"/>
+<text x="368" y="1000" font-size="11.5" font-weight="400" fill="#111827" text-anchor="start" font-family="Arial, Helvetica, sans-serif">dependencia</text></svg>

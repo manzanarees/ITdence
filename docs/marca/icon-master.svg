@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="grad" x1="15%" y1="10%" x2="90%" y2="95%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="50%" stop-color="#885CF6"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <mask id="ticketMask">
+      <rect x="62" y="75" width="76" height="50" rx="10" fill="#ffffff"/>
+      <circle cx="62" cy="100" r="8" fill="#000000"/>
+      <circle cx="138" cy="100" r="8" fill="#000000"/>
+    </mask>
+  </defs>
+
+  <!-- anillo circular -->
+  <circle cx="100" cy="100" r="84" fill="none" stroke="url(#grad)" stroke-width="9"/>
+
+  <!-- ticket -->
+  <rect x="62" y="75" width="76" height="50" rx="10" fill="url(#grad)" mask="url(#ticketMask)"/>
+
+  <!-- letra i -->
+  <circle cx="100" cy="88" r="4.5" fill="#ffffff"/>
+  <rect x="95.5" y="97" width="9" height="20" rx="4.5" fill="#ffffff"/>
+</svg>

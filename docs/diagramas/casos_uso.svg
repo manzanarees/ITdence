@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1015" viewBox="0 0 900 1015"><defs>
+      <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker>
+      <marker id="flechaMorada" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6D3FD6"/></marker>
+      <marker id="triangulo" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse"><path d="M0 0 L12 6 L0 12 z" fill="#fff" stroke="#475569" stroke-width="1.3"/></marker>
+      <marker id="rombo" viewBox="0 0 14 10" refX="1" refY="5" markerWidth="13" markerHeight="9" orient="auto-start-reverse"><path d="M0 5 L7 0 L14 5 L7 10 z" fill="#475569"/></marker>
+    </defs><rect width="100%" height="100%" fill="#fff"/><rect x="170" y="140" width="560" height="835" rx="12" fill="#FCFBFF" stroke="#6D3FD6" stroke-width="2"/>
+<text x="190" y="335" font-size="15" font-weight="700" fill="#6D3FD6" text-anchor="start" font-family="Arial, Helvetica, sans-serif">Sistema ITdence</text>
+<ellipse cx="255" cy="205" rx="60" ry="27" fill="#EEF2F7" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="255" y="210" font-size="12" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Iniciar sesión</text>
+<ellipse cx="385" cy="205" rx="60" ry="27" fill="#EEF2F7" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="385" y="202.5" font-size="12" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Cambiar nombre</text>
+<text x="385" y="217.5" font-size="12" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">y contraseña</text>
+<ellipse cx="515" cy="205" rx="60" ry="27" fill="#EEF2F7" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="515" y="202.5" font-size="12" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Ver avisos</text>
+<text x="515" y="217.5" font-size="12" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">(campana)</text>
+<ellipse cx="645" cy="205" rx="60" ry="27" fill="#EEF2F7" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="645" y="202.5" font-size="12" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Buscar tickets</text>
+<text x="645" y="217.5" font-size="12" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">(Ctrl + K)</text>
+<circle cx="450" cy="28" r="10" fill="#FFFFFF" stroke="#6B7280" stroke-width="1.8"/>
+<path d="M450 38 L450 66" fill="none" stroke="#6B7280" stroke-width="1.8"/>
+<path d="M432 48 L468 48" fill="none" stroke="#6B7280" stroke-width="1.8"/>
+<path d="M450 66 L436 88" fill="none" stroke="#6B7280" stroke-width="1.8"/>
+<path d="M450 66 L464 88" fill="none" stroke="#6B7280" stroke-width="1.8"/>
+<text x="450" y="108" font-size="14" font-weight="700" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Usuario (abstracto)</text>
+<path d="M450 114 L255 178" fill="none" stroke="#6B7280" stroke-width="1.3"/>
+<path d="M450 114 L385 178" fill="none" stroke="#6B7280" stroke-width="1.3"/>
+<path d="M450 114 L515 178" fill="none" stroke="#6B7280" stroke-width="1.3"/>
+<path d="M450 114 L645 178" fill="none" stroke="#6B7280" stroke-width="1.3"/>
+<ellipse cx="310" cy="443" rx="120" ry="21" fill="#EFE9FD" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="310" y="448" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Crear ticket</text>
+<ellipse cx="310" cy="497" rx="120" ry="21" fill="#EFE9FD" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="310" y="494.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Adjuntar capturas</text>
+<text x="310" y="509.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">al ticket</text>
+<ellipse cx="310" cy="551" rx="120" ry="21" fill="#EFE9FD" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="310" y="548.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Ver mis tickets</text>
+<text x="310" y="563.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">y su estado</text>
+<ellipse cx="310" cy="605" rx="120" ry="21" fill="#EFE9FD" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="310" y="610" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Comentar en un ticket</text>
+<ellipse cx="310" cy="659" rx="120" ry="21" fill="#EFE9FD" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="310" y="664" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Cancelar mi ticket</text>
+<ellipse cx="310" cy="713" rx="120" ry="21" fill="#EFE9FD" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="310" y="710.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Cerrar el ticket</text>
+<text x="310" y="725.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">y valorar la atención</text>
+<ellipse cx="310" cy="767" rx="120" ry="21" fill="#EFE9FD" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="310" y="764.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Reabrir el ticket</text>
+<text x="310" y="779.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">con un motivo</text>
+<ellipse cx="590" cy="296" rx="120" ry="21" fill="#EFE9FD" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="590" y="301" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Ver la bandeja de tickets</text>
+<ellipse cx="590" cy="350" rx="120" ry="21" fill="#EFE9FD" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="590" y="355" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Tomar un ticket</text>
+<ellipse cx="590" cy="404" rx="120" ry="21" fill="#EFE9FD" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="590" y="401.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Cambiar el estado</text>
+<text x="590" y="416.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">de mis tickets</text>
+<ellipse cx="590" cy="458" rx="120" ry="21" fill="#EFE9FD" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="590" y="455.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Comentar y escribir</text>
+<text x="590" y="470.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">notas internas</text>
+<ellipse cx="590" cy="512" rx="120" ry="21" fill="#EFE9FD" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="590" y="517" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Usar respuestas rápidas</text>
+<ellipse cx="590" cy="566" rx="120" ry="21" fill="#EFE9FD" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="590" y="563.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Mover tarjetas</text>
+<text x="590" y="578.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">en el tablero Kanban</text>
+<ellipse cx="590" cy="644" rx="120" ry="21" fill="#E6EEFC" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="590" y="649" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Ver resumen y métricas</text>
+<ellipse cx="590" cy="698" rx="120" ry="21" fill="#E6EEFC" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="590" y="695.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Asignar o reasignar</text>
+<text x="590" y="710.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">un técnico</text>
+<ellipse cx="590" cy="752" rx="120" ry="21" fill="#E6EEFC" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="590" y="749.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Cambiar el estado</text>
+<text x="590" y="764.5" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">de cualquier ticket</text>
+<ellipse cx="590" cy="806" rx="120" ry="21" fill="#E6EEFC" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="590" y="811" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Gestionar usuarios</text>
+<ellipse cx="590" cy="860" rx="120" ry="21" fill="#E6EEFC" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="590" y="865" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Gestionar categorías</text>
+<ellipse cx="590" cy="914" rx="120" ry="21" fill="#E6EEFC" stroke="#6D3FD6" stroke-width="1.5"/>
+<text x="590" y="919" font-size="13" font-weight="400" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Gestionar respuestas rápidas</text>
+<circle cx="70" cy="576" r="10" fill="#FFFFFF" stroke="#475569" stroke-width="1.8"/>
+<path d="M70 586 L70 614" fill="none" stroke="#475569" stroke-width="1.8"/>
+<path d="M52 596 L88 596" fill="none" stroke="#475569" stroke-width="1.8"/>
+<path d="M70 614 L56 636" fill="none" stroke="#475569" stroke-width="1.8"/>
+<path d="M70 614 L84 636" fill="none" stroke="#475569" stroke-width="1.8"/>
+<text x="70" y="656" font-size="14" font-weight="700" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Cliente</text>
+<circle cx="830" cy="402" r="10" fill="#FFFFFF" stroke="#475569" stroke-width="1.8"/>
+<path d="M830 412 L830 440" fill="none" stroke="#475569" stroke-width="1.8"/>
+<path d="M812 422 L848 422" fill="none" stroke="#475569" stroke-width="1.8"/>
+<path d="M830 440 L816 462" fill="none" stroke="#475569" stroke-width="1.8"/>
+<path d="M830 440 L844 462" fill="none" stroke="#475569" stroke-width="1.8"/>
+<text x="830" y="482" font-size="14" font-weight="700" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Técnico</text>
+<circle cx="830" cy="750" r="10" fill="#FFFFFF" stroke="#475569" stroke-width="1.8"/>
+<path d="M830 760 L830 788" fill="none" stroke="#475569" stroke-width="1.8"/>
+<path d="M812 770 L848 770" fill="none" stroke="#475569" stroke-width="1.8"/>
+<path d="M830 788 L816 810" fill="none" stroke="#475569" stroke-width="1.8"/>
+<path d="M830 788 L844 810" fill="none" stroke="#475569" stroke-width="1.8"/>
+<text x="830" y="830" font-size="14" font-weight="700" fill="#111827" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Administrador</text>
+<path d="M88 596 L190 443" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M88 596 L190 497" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M88 596 L190 551" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M88 596 L190 605" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M88 596 L190 659" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M88 596 L190 713" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M88 596 L190 767" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M812 422 L710 296" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M812 422 L710 350" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M812 422 L710 404" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M812 422 L710 458" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M812 422 L710 512" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M812 422 L710 566" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M812 770 L710 644" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M812 770 L710 698" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M812 770 L710 752" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M812 770 L710 806" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M812 770 L710 860" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M812 770 L710 914" fill="none" stroke="#475569" stroke-width="1.3"/>
+<path d="M70 562 L70 44 L428 44" fill="none" stroke="#6B7280" stroke-width="1.5" marker-end="url(#triangulo)"/>
+<path d="M830 388 L830 44 L472 44" fill="none" stroke="#6B7280" stroke-width="1.5" marker-end="url(#triangulo)"/>
+<path d="M830 736 L830 492" fill="none" stroke="#6B7280" stroke-width="1.5" marker-end="url(#triangulo)"/>
+<text x="848" y="640" font-size="11" font-weight="400" fill="#6B7280" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-style="italic" transform="rotate(-90 848 640)">hereda del técnico</text>
+<text x="170" y="1002" font-size="11" font-weight="400" fill="#6B7280" text-anchor="start" font-family="Arial, Helvetica, sans-serif">Triángulo vacío = herencia: cliente y técnico son usuarios; el administrador puede hacer todo lo del técnico.</text></svg>
